@@ -10,9 +10,6 @@ service / on new http:Listener(9090) {
     //     counter = 0;
     // }
 
-    # A resource for generating greetings
-    # + name - the input string name
-    # + return - string name with hello message or error
     transactional resource function get greeting(string name) returns string {
         return "Hello, " + name + "!";
     }
